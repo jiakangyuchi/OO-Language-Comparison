@@ -1,8 +1,8 @@
 Team members: 
-Jiakang Yuchi
-Penghui Shang
+Jiakang Yuchi,
+Penghui Shang,
 Yuhan Li 
 
 Comparison:
-Python
+Python,
 Php
