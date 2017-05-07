@@ -26,17 +26,29 @@ Compare Python and Php
    php:Yes, like variable variables, Real-Time Access Monitoring, and PHP supports variable usage without declaring its data type.
    
    python:The automatic processing of docstrings to become properties of their owner. In general all of Python's brilliant introspection features make it a very unique language, from the ability to use help() to the ability to use __doc__ as a first-class property of an object. For example:
+   
 >>> class DocStringException(Exception):
+
 ...     """Error message is the same as docstring"""
+
 ...     def __str__(self):
+
 ...         return repr(self.__doc__)
+
 ... 
+
 >>> class ExampleException(DocStringException):
+
 ...     """An example happened"""
+
 ... 
+
 >>> raise ExampleException
+
 Traceback (most recent call last):
+
   File "<stdin>", line 1, in <module>
+  
 __main__.ExampleException: 'An example happened'
    
 [Go to README.md](README.md)
