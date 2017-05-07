@@ -1,4 +1,10 @@
-# OO-Language-Comparison
-Compare Python and Php
+Team members: 
+Jiakang Yuchi,
+Penghui Shang,
+Yuhan Li 
 
-[Go to README.md](README.md)
+Comparison:
+Python,
+Php
+
+[Go to Comparison.md](Comparison.md)
