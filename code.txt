@@ -1,4 +1,4 @@
-Unique features of the language(python):
+UNIQUE FEATURES OF THE LANGUAGE(python):
 >>> class DocStringException(Exception):
 ...     """Error message is the same as docstring"""
 ...     def __str__(self):
@@ -13,7 +13,7 @@ Traceback (most recent call last):
 __main__.ExampleException: 'An example happened'
 
 
-Name spaces(php):
+NAME SPACES(php):
 <?php
 namespace my\name; // see "Defining Namespaces" section
 
@@ -34,7 +34,7 @@ echo constant($d); // see "Namespaces and dynamic language features" section
 ?>
 
 
-Name spaces(python):
+NAME SPACES(python):
 def scope_test():
     def do_local():
         spam = "local spam"
@@ -59,7 +59,7 @@ scope_test()
 print("In global scope:", spam)
 
 
-Can new value types be created(python):
+CAN NEW VALUE TYPES BE CREATED(python):
 #include <Python.h>
 
 typedef struct {
