@@ -1,10 +1,4 @@
-Team members: 
-Jiakang Yuchi,
-Penghui Shang,
-Yuhan Li 
+# OO-Language-Comparison
+Compare Python and Php
 
-Comparison:
-Python,
-Php
-
-[Go to Comparison.md](Comparison.md)
+[Go to README.md](README.md)
