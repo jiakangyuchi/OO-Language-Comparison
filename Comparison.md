@@ -50,5 +50,9 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   
 __main__.ExampleException: 'An example happened'
+
+* Name spaces
+  * How are name spaces implemented?
+  * How are name spaces used?
    
 [Go to README.md](README.md)
