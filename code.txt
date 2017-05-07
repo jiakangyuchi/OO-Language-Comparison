@@ -1,0 +1,33 @@
+Unique features of the language:
+>>> class DocStringException(Exception):
+...     """Error message is the same as docstring"""
+...     def __str__(self):
+...         return repr(self.__doc__)
+... 
+>>> class ExampleException(DocStringException):
+...     """An example happened"""
+... 
+>>> raise ExampleException
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+__main__.ExampleException: 'An example happened'
+
+Name spaces:
+<?php
+namespace my\name; // see "Defining Namespaces" section
+
+class MyClass {}
+function myfunction() {}
+const MYCONST = 1;
+
+$a = new MyClass;
+$c = new \my\name\MyClass; // see "Global Space" section
+
+$a = strlen('hi'); // see "Using namespaces: fallback to global
+                   // function/constant" section
+
+$d = namespace\MYCONST; // see "namespace operator and __NAMESPACE__
+                        // constant" section
+$d = __NAMESPACE__ . '\MYCONST';
+echo constant($d); // see "Namespaces and dynamic language features" section
+?>
