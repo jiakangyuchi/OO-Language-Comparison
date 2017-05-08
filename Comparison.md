@@ -242,6 +242,15 @@ All methods declared in an interface must be public; this is the nature of an in
     
 * Multithreading
   * Threads or thread-like abilities
+  
+    python: only one thread can safely execute code in the interpreter at the same time.
+    
+    php: PHP is not a threaded language : its engine and its code don't manage threads to parallelize its own internal work. PHP doesn't offer threads to users : You can't use threads with the PHP language natively. 
+  
   * How is multitasking accomplished?
+    
+    php: it hides the complex async work behind a promises-based interface.
+    
+    python: MultiTasking is a tiny Python library lets you convert your Python methods into asynchronous, non-blocking methods simply by using a decorator.
     
     [Go to README.md](README.md)
