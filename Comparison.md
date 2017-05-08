@@ -205,11 +205,43 @@ All methods declared in an interface must be public; this is the nature of an in
 
 * Implementation of listeners and event handlers
 
-
+  check code.txt please.
 
 * Singleton
   * How is a singleton implemented?
+  
+    python:Possibly the simplest design pattern is the singleton, which is a way to provide one and only one object of a particular type. To accomplish this, you must take control of object creation out of the hands of the programmer. One convenient way to do this is to delegate to a single instance of a private nested inner class
+    
+    php:In the singleton pattern a class can distribute one instance of itself to other classes.
+  
   * Can it be made thread-safe?
+  
+    php: yes, but your php version has to be thread-safe.
+    
+    python: yes
+  
   * Can the singleton instance be lazily instantiated?
+  
+    python:yes
+    
+    php:yes
+  
+* Procedural programming
+  * Does the language support procedural programming?
+    
+    python:yes
+    
+    php: yes
+    
+* Functional programming
+  * Does the language support functional programming?
+  
+    python: yes, but it is not very good for functional programming.
+    
+    php:yes
+    
+* Multithreading
+  * Threads or thread-like abilities
+  * How is multitasking accomplished?
     
     [Go to README.md](README.md)
