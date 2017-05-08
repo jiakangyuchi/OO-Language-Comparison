@@ -198,6 +198,18 @@ All methods declared in an interface must be public; this is the nature of an in
 
 
 * Lambda expressions, closures, or functions as types
+
+  python: Python supports the creation of anonymous functions (i.e. functions that are not bound to a name) at runtime, using a construct called "lambda". This is not exactly the same as lambda in functional programming languages, but it is a very powerful concept that's well integrated into Python and is often used in conjunction with typical functional concepts like filter(), map() and reduce().
+
+  php:a lambda function is an anonymous PHP function that can be stored in a variable and passed as an argument to other functions or methods. A closure is a lambda function that is aware of its surrounding context.
+
 * Implementation of listeners and event handlers
+
+
+
+* Singleton
+  * How is a singleton implemented?
+  * Can it be made thread-safe?
+  * Can the singleton instance be lazily instantiated?
     
     [Go to README.md](README.md)
