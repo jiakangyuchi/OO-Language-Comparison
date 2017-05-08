@@ -133,4 +133,36 @@ All methods declared in an interface must be public; this is the nature of an in
   Python has multiple inheritance, and there's less need for interfaces.
   
   php does not has multiple inheritance.
+  
+* Reflection
+  * What reflection abilities are supported?
+  
+    python: A Python script can find out about the type, class, attributes and methods of an object.
+    
+    php: with Reflection, you won’t need to use many of these classes or methods.
+  
+  * How is reflection used?
+  
+    check code.txt please
+    
+* Memory management
+  * How is it handled?
+  
+    php: The most important of its features for the Hacker, and the first thing to mention is tracking allocations. Tracking allocations allow the memory manager to avoid leaks, a thorn in the side of most Hackers. When PHP is built in debug mode (--enable-debug), detected leaks are reported, in a perfect world they would never get to deployment.
+    
+    python: Python's memory allocation and deallocation method is automatic. The user does not have to preallocate or deallocate memory by hand as one has to when using dynamic memory allocation in languages such as C or C++. Python uses two strategies for memory allocation reference counting and garbage collection.
+  
+  * How does it work?
+  
+    php: From the Hacker's perspective, the memory management API looks very much like libc's (or whoever the Hacker prefers !) malloc implementation.
+  
+    python: Memory management in Python involves a private heap containing all Python objects and data structures. The management of this private heap is ensured internally by the Python memory manager. The Python memory manager has different components which deal with various dynamic storage management aspects, like sharing, segmentation, preallocation or caching.
+    
+  * Garbage collection?
+  
+    php:
+    
+    python:  Python schedules garbage collection based upon a threshold of object allocations and object deallocations. When the number of allocations minus the number of deallocations are greater than the threshold number, the garbage collector is run. Automatic garbage collection will not run if your Python device is running out of memory
+    
+  * Automatic reference counting?
 [Go to README.md](README.md)
