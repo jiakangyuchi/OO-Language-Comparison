@@ -150,7 +150,7 @@ All methods declared in an interface must be public; this is the nature of an in
   
     php: The most important of its features for the Hacker, and the first thing to mention is tracking allocations. Tracking allocations allow the memory manager to avoid leaks, a thorn in the side of most Hackers. When PHP is built in debug mode (--enable-debug), detected leaks are reported, in a perfect world they would never get to deployment.
     
-    python: Python's memory allocation and deallocation method is automatic. The user does not have to preallocate or deallocate memory by hand as one has to when using dynamic memory allocation in languages such as C or C++. Python uses two strategies for memory allocation reference counting and garbage collection.
+    python: Python's memory allocation and deallocation method is automatic. The user does not have to preallocate or deallocate memory by hand as one has to when using dynamic memory allocation in languages such as C or C++. Python uses two strategies for memory allocation reference counting and garbage collection. Manual Garbage Collection is also allowed.
   
   * How does it work?
   
@@ -160,9 +160,44 @@ All methods declared in an interface must be public; this is the nature of an in
     
   * Garbage collection?
   
-    php:
+    php: A PHP variable is stored in a container called a "zval". A zval container contains, besides the variable's type and value, two additional bits of information. The first is called "is_ref" and is a boolean value indicating whether or not the variable is part of a "reference set". With this bit, PHP's engine knows how to differentiate between normal variables and references. 
     
-    python:  Python schedules garbage collection based upon a threshold of object allocations and object deallocations. When the number of allocations minus the number of deallocations are greater than the threshold number, the garbage collector is run. Automatic garbage collection will not run if your Python device is running out of memory
+    python:  Python schedules garbage collection based upon a threshold of object allocations and object deallocations. When the number of allocations minus the number of deallocations are greater than the threshold number, the garbage collector is run. Automatic garbage collection will not run if your Python device is running out of memory.
     
   * Automatic reference counting?
-[Go to README.md](README.md)
+  
+    both yes.
+  
+* Comparisons of references and values
+  * How are values compared? (i.e. comparing two strings)
+    
+    Python uses "is" instead of "===" in php.
+    
+    php uses "!==" to find out if $a is not equal to $b, or they are not of the same type.
+    
+    php uses "<=>" to find out if an integer less than, equal to, or greater than zero when $a is respectively less than, equal to, or greater than $b
+  
+* Null/nil references
+  * Which does the language use? (null/nil/etc)
+  
+    python:none;
+    
+    php:null
+ 
+  * Does the language have features for handling null/nil references?
+  
+    python:has no value or the value is None.
+    
+    php: has no value or the value is NULL
+    
+* Errors and exception handling
+    
+    php:The error reporting functions allow you to customize what level and kind of error feedback is given, ranging from simple notices to customized functions returned during errors.
+    
+    python:It is possible to write programs that handle selected exceptions. Look at the following example, which asks the user for input until a valid integer has been entered, but allows the user to interrupt the program (using Control-C or whatever the operating system supports); note that a user-generated interruption is signalled by raising the KeyboardInterrupt exception.
+
+
+* Lambda expressions, closures, or functions as types
+* Implementation of listeners and event handlers
+    
+    [Go to README.md](README.md)
