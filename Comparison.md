@@ -95,7 +95,42 @@ Non-static attributes in php are like self. in python, and static attrubutes in 
 * Properties
   * Getters and setters...write your own or built in?
   
+  both build in.
+  
   * Backing variables?
+  
+  both yes.
+  
   * Computed properties?
   
+  both yes.
+  
+  Python code doesn’t typically use the get and set methods so common in PHP. it has a construct called a “property”.
+  
+* Interfaces / protocols
+  * What does the language support?
+  
+  php:both
+  
+  python:both
+  
+  * What abilities does it have?
+  
+    It's possible for interfaces to have constants in both languages.
+
+  * How is it used?
+  
+    php:Object interfaces allow you to create code which specifies which methods a class must implement, without having to define how these methods are handled.
+
+Interfaces are defined in the same way as a class, but with the interface keyword replacing the class keyword and without any of the methods having their contents defined.
+
+All methods declared in an interface must be public; this is the nature of an interface.
+
+   python: Interface requirements are checked at class creation time, rather than at instance creation time. This means that interface can tell you if a class fails to meet the requirements of an interface even if you never create any instances of that class. interface requires that method signatures of interface implementations are compatible with the signatures declared in the interface. 
+  
+* Inheritance / extension
+  
+  Python has multiple inheritance, and there's less need for interfaces.
+  
+  php does not has multiple inheritance.
 [Go to README.md](README.md)
