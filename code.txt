@@ -139,3 +139,126 @@ class ClassName:
     <statement-N>
 ----------------------------------------------------------------------------------------------------------------------------------------
 
+class constructors and destructors(python):
+
+def __init__(self, args...): #constructor
+    pass
+
+def __del__(self): #destructor
+    pass
+----------------------------------------------------------------------------------------------------------------------------------------
+
+class destructors(php):
+<?php
+class MyDestructableClass {
+   function __construct() {
+       print "In constructor\n";
+       $this->name = "MyDestructableClass";
+   }
+
+   function __destruct() {
+       print "Destroying " . $this->name . "\n";
+   }
+}
+
+$obj = new MyDestructableClass();
+?>
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Instance reference name in data type(python):
+
+class CrowdProcess():
+    def __init__(self,variable):
+        self.variable = variable
+
+    def otherfunc(self):
+        print self.variable
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Instance reference name in data type(php):
+
+class CrowdProcess
+{
+    public $variable;
+
+    public function __construct($variable)
+    {
+        $this->variable = $variable;
+    }
+
+    public function otherfunc()
+    {
+        echo $this->variable, PHP_EOL;
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+
+properties(python):
+
+class Book {
+  private $title = property(getTitle, setTitle);
+
+  public function setTitle($title) {
+    $this->title = $title;
+  }
+
+  public function getTitle() {
+    return $this->title;
+  }
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+
+properties(php):
+
+class Book {
+  private $title;
+
+  public function setTitle($title) {
+    $this->title = $title;
+  }
+
+  public function getTitle() {
+    return $this->title;
+  }
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Reflection(php)
+
+// Without reflection
+$foo = new Foo();
+$foo->hello();
+
+// With reflection
+$reflector = new ReflectionClass('Foo');
+$foo = $reflector->newInstance();
+$hello = $reflector->getMethod('hello');
+$hello->invoke($foo);
+
+// using callback
+$foo = new Foo();
+call_user_func(array($foo, 'hello'));
+
+// using variable variables syntax
+$className = 'Foo';
+$foo = new $className();
+$method = 'hello';
+$foo->$method();
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Reflection(python)
+
+# without reflection
+obj = Foo()
+obj.hello()
+
+# with reflection
+class_name = "Foo"
+method = "hello"
+obj = globals()[class_name]()
+getattr(obj, method)()
+
+# with eval
+eval("Foo().hello()")
+----------------------------------------------------------------------------------------------------------------------------------------
+
