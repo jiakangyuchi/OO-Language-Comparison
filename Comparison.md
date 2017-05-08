@@ -25,34 +25,40 @@ Compare Python and Php
    
    php:Yes, like variable variables, Real-Time Access Monitoring, and PHP supports variable usage without declaring its data type.
    
-   python:The automatic processing of docstrings to become properties of their owner. In general all of Python's brilliant introspection features make it a very unique language, from the ability to use help() to the ability to use __doc__ as a first-class property of an object. For example:
-   
->>> class DocStringException(Exception):
-
-...     """Error message is the same as docstring"""
-
-...     def __str__(self):
-
-...         return repr(self.__doc__)
-
-... 
-
->>> class ExampleException(DocStringException):
-
-...     """An example happened"""
-
-... 
-
->>> raise ExampleException
-
-Traceback (most recent call last):
-
-  File "<stdin>", line 1, in <module>
-  
-__main__.ExampleException: 'An example happened'
+   python:The automatic processing of docstrings to become properties of their owner. In general all of Python's brilliant introspection features make it a very unique language, from the ability to use help() to the ability to use __doc__ as a first-class property of an object.
 
 * Name spaces
   * How are name spaces implemented?
   * How are name spaces used?
+  
+  php:In the PHP world, namespaces are designed to solve two problems that authors of libraries and applications encounter when creating re-usable code elements such as classes or functions:
+
+1 Name collisions between code you create, and internal PHP classes/functions/constants or third-party classes/functions/constants.
+
+2 Ability to alias (or shorten) Extra_Long_Names designed to alleviate the first problem, improving readability of source code.
+
+PHP Namespaces provide a way in which to group related classes, interfaces, functions and constants. 
+
+  python:A namespace is a mapping from names to objects. Most namespaces are currently implemented as Python dictionaries, but that’s normally not noticeable in any way (except for performance), and it may change in the future. Examples of namespaces are: the set of built-in names (containing functions such as abs(), and built-in exception names); the global names in a module; and the local names in a function invocation. In a sense the set of attributes of an object also form a namespace. The important thing to know about namespaces is that there is absolutely no relation between names in different namespaces; for instance, two different modules may both define a function maximize without confusion — users of the modules must prefix it with the module name.
+  
+ * Types
+   * What types does the language support?
+   
+   php:String, Integer, Float (floating point numbers - also called double), Boolean, Array, Object, NULL, Resource.
+   
+   python:str, bytearray, bytes, list, tuple, set, frozenset, dict, int, float, complex, bool, ellipsis.
+   
+   * Are both reference and value types supported?
+   
+   php:yes
+   
+   python:yes
+   
+   * Can new value types be created?
+   
+   php:no
+   
+   python:yes
+   
    
 [Go to README.md](README.md)
