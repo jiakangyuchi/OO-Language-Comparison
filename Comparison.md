@@ -1,4 +1,8 @@
 # OO-Language-Comparison
+
+    [Go to README.md](README.md)
+    [Go to code.txt](code.txt)
+    
 Compare Python and Php
 
 * Language purpose/genesis
@@ -253,4 +257,4 @@ All methods declared in an interface must be public; this is the nature of an in
     
     python: MultiTasking is a tiny Python library lets you convert your Python methods into asynchronous, non-blocking methods simply by using a decorator.
     
-    [Go to README.md](README.md)
+
