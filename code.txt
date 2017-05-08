@@ -614,3 +614,46 @@ g = Foo.Instance() # Returns already created instance
 print f is g # True
 ----------------------------------------------------------------------------------------------------------------------------------------
 
+multithread(php):
+<?php
+
+function work() {
+    /* Do some work */
+
+    return 'result';
+}
+
+$dispatcher = new Amp\Thread\Dispatcher;
+
+// call 2 functions to be executed asynchronously
+$promise1 = $dispatcher->call('work');
+$promise2 = $dispatcher->call('work');
+
+$comboPromise = Amp\all([$promise1, $promise2]);
+list($result1, $result2) = $comboPromise->wait();
+?>
+----------------------------------------------------------------------------------------------------------------------------------------
+
+multithread(python):
+
+import multitasking
+import time
+import random
+import signal
+
+# kill all tasks on ctrl-c
+signal.signal(signal.SIGINT, multitasking.killall)
+
+# or, wait for task to finish on ctrl-c:
+# signal.signal(signal.SIGINT, multitasking.wait_for_tasks)
+
+@multitasking.task # <== this is all it takes :-)
+def hello(count):
+    sleep = random.randint(1,10)/2
+    print("Hello %s (sleeping for %ss)" % (count, sleep))
+    time.sleep(sleep)
+    print("Goodbye %s (after for %ss)" % (count, sleep))
+
+if __name__ == "__main__":
+    for i in range(0, 10):
+        hello(i+1)
