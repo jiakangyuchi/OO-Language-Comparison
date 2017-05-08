@@ -60,5 +60,42 @@ PHP Namespaces provide a way in which to group related classes, interfaces, func
    
    python:yes
    
-   
+* Classes
+  * Defining
+  
+  php:Basic class definitions begin with the keyword class, followed by a class name, followed by a pair of curly braces which enclose the definitions of the properties and methods belonging to the class.
+
+The class name can be any valid label, provided it is not a PHP reserved word. A valid class name starts with a letter or underscore, followed by any number of letters, numbers, or underscores. As a regular expression, it would be expressed thus: ^[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*$.
+
+A class may contain its own constants, variables (called "properties"), and functions (called "methods").
+
+python: Class definitions, like function definitions (def statements) must be executed before they have any effect. (You could conceivably place a class definition in a branch of an if statement, or inside a function.)
+
+Non-static attributes in php are like self. in python, and static attrubutes in php are like classes in python。
+
+  * Creating new instances
+  
+  php:In the class context, it is possible to create a new object by new self and new parent.
+  
+  python:Class instantiation uses function notation. Just pretend that the class object is a parameterless function that returns a new instance of the class.
+  
+  * Constructing/initializing
+  
+  constructor is implied to be a static which is different with php.
+  
+  * Destructing/de-initializing
+  
+  In php, parent destructors will not be called implicitly by the engine. In order to run a parent destructor, one would have to explicitly call parent::__destruct() in the destructor body.
+  
+* Instance reference name in data type (class)
+  * this?  self?
+  
+  Python does not have "this", it use "self" as a reference to the instance. And php use "this" as a reference to the instance.
+  
+* Properties
+  * Getters and setters...write your own or built in?
+  
+  * Backing variables?
+  * Computed properties?
+  
 [Go to README.md](README.md)
