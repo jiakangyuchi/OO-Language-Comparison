@@ -399,3 +399,89 @@ except:
     raise
 ----------------------------------------------------------------------------------------------------------------------------------------
 
+lambda(python):
+>>> def make_incrementor (n): return lambda x: x + n
+>>> 
+>>> f = make_incrementor(2)
+>>> g = make_incrementor(6)
+>>> 
+>>> print f(42), g(42)
+44 48
+>>> 
+>>> print make_incrementor(22)(33)
+55
+----------------------------------------------------------------------------------------------------------------------------------------
+
+lambda(php):
+function change_array($arr, $pdo)
+{
+    $keys = array('a', 'c');
+    $anon_func = function(& $val, $key) use ($keys, $pdo)
+    {
+         if (in_array($key, $keys) {
+            $pdo->query('some query using $key');
+            $val = $pdo->fetch();
+        }
+    }
+    arr_walk($arr, $anon_func);
+    return $arr;
+}
+
+$pdo = new($dsn, $uname, $pword);
+$sample = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4);
+$sample = change_array($sample, $pdo);
+----------------------------------------------------------------------------------------------------------------------------------------
+
+event-listener(python):
+class Event( object ):
+    """
+    Generic event to use with EventDispatcher.
+    """
+
+    def __init__(self, event_type, data=None):
+        """
+        The constructor accepts an event type as string and a custom data
+        """
+        self._type = event_type
+        self._data = data
+
+    @property
+    def type(self):
+        """
+        Returns the event type
+        """
+        return self._type
+
+    @property
+    def data(self):
+        """
+        Returns the data associated to the event
+        """
+        return self._data
+----------------------------------------------------------------------------------------------------------------------------------------
+
+event-listener(php):
+
+class event
+{
+    public static $events = array();
+
+    public static function trigger($event, $args = array())
+    {
+        if(isset(self::$events[$event]))
+        {
+            foreach(self::$events[$event] as $func)
+            {
+                call_user_func($func, $args);
+            }
+        }
+
+    }
+
+    public static function bind($event, Closure $func)
+    {
+        self::$events[$event][] = $func;
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+
