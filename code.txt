@@ -11,7 +11,7 @@ UNIQUE FEATURES OF THE LANGUAGE(python):
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 __main__.ExampleException: 'An example happened'
-
+----------------------------------------------------------------------------------------------------------------------------------------
 
 NAME SPACES(php):
 <?php
@@ -32,7 +32,7 @@ $d = namespace\MYCONST; // see "namespace operator and __NAMESPACE__
 $d = __NAMESPACE__ . '\MYCONST';
 echo constant($d); // see "Namespaces and dynamic language features" section
 ?>
-
+----------------------------------------------------------------------------------------------------------------------------------------
 
 NAME SPACES(python):
 def scope_test():
@@ -58,7 +58,7 @@ def scope_test():
 scope_test()
 print("In global scope:", spam)
 
-
+----------------------------------------------------------------------------------------------------------------------------------------
 CAN NEW VALUE TYPES BE CREATED(python):
 #include <Python.h>
 
@@ -113,3 +113,29 @@ initnoddy(void)
     Py_INCREF(&noddy_NoddyType);
     PyModule_AddObject(m, "Noddy", (PyObject *)&noddy_NoddyType);
 }
+----------------------------------------------------------------------------------------------------------------------------------------
+
+classes defining(php):
+<?php
+class SimpleClass
+{
+    // property declaration
+    public $var = 'a default value';
+
+    // method declaration
+    public function displayVar() {
+        echo $this->var;
+    }
+}
+?>
+----------------------------------------------------------------------------------------------------------------------------------------
+
+class defining(python):
+class ClassName:
+    <statement-1>
+    .
+    .
+    .
+    <statement-N>
+----------------------------------------------------------------------------------------------------------------------------------------
+
