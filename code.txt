@@ -1,3 +1,8 @@
+[Go to Comparison.md](Comparison.md)
+
+[Go to README.md](README.md)
+
+
 UNIQUE FEATURES OF THE LANGUAGE(python):
 >>> class DocStringException(Exception):
 ...     """Error message is the same as docstring"""
@@ -657,3 +662,7 @@ def hello(count):
 if __name__ == "__main__":
     for i in range(0, 10):
         hello(i+1)
+
+[Go to Comparison.md](Comparison.md)
+
+[Go to README.md](README.md)
