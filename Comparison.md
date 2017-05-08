@@ -1,7 +1,7 @@
 # OO-Language-Comparison
 
-    [Go to README.md](README.md)
-    [Go to code.txt](code.txt)
+   [Go to README.md](README.md)
+   [Go to code.txt](code.txt)
     
 Compare Python and Php
 
